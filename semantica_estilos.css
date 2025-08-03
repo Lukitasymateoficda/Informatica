@@ -40,14 +40,14 @@ body {
   }
   
   article {
-    background-color: grey;
+    background-color: white;
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
   }
   
   aside {
-    background-color: grey;
+    background-color: white;
     padding: 1rem;
     border-left: 4px solid red;
   }
@@ -78,3 +78,4 @@ body {
     text-decoration: none;
 
   }
+
