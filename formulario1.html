@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="./formulario.css">
 </head>
 <body>
     <form id="formulario">
@@ -39,6 +40,13 @@
  alert('Selecciona un género.');
  return;
  }
+ // Determinar saludo
+ if (radio.value === 'hombre') {
+ saludo = 'Bienvenido';
+ } else {
+ saludo = 'Bienvenida';
+ } 
+
 //Capturar país y determinar saludo específico
 let pais = document.getElementById("pais").value;
  let frasePais = "";
