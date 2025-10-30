@@ -1,4 +1,4 @@
-const boton = document.getElementById('btnCambiarFondo');
-boton.addEventListener('click', function() {
-    document.body.style.backgroundColor = 'lightblue';
-});
+function cambiarColor(fondo,texto){
+    document.body.style.backgroundColor= fondo;
+    document.getElementById("texto").style.color=texto;
+}
