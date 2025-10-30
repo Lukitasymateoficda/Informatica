@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculador de días para un evento</title>
+</head>
+<body>
+  <h2>Calculador de días para un evento</h2>
+
+  <form onsubmit="event.preventDefault(); calcularDias();">
+    <label>Nombre del evento:</label><br>
+    <input type="text" id="evento" placeholder="Ej: cumpleaños, examen, viaje"><br><br>
+
+    <label>Fecha del evento:</label><br>
+    <input type="date" id="fecha"><br><br>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  <p id="resultado"></p>
+
+  <script>
+    function calcularDias() {
+      let nombre = document.getElementById("evento").value;
+      let fechaEvento = new Date(document.getElementById("fecha").value);
+      let hoy = new Date();
+
+      // Validar campos vacíos
+      if (!nombre || !document.getElementById("fecha").value) {
+        document.getElementById("resultado").textContent = "Por favor, complete todos los campos.";
+        return;
+      }
+
+      // Calcular diferencia en milisegundos
+      let diferencia = fechaEvento - hoy;
+      let dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
+
+      // Mostrar resultado
+      if (dias > 0) {
+        document.getElementById("resultado").textContent = `Faltan ${dias} días para ${nombre}.`;
+      } else if (dias === 0) {
+        document.getElementById("resultado").textContent = `¡El evento '${nombre}' es hoy! 🎉`;
+      } else {
+        document.getElementById("resultado").textContent = `El evento '${nombre}' ya ocurrió.`;
+      }
+    }
+  </script>
+</body>
+</html>
+

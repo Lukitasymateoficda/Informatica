@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambiar colores de fondo y texto</title>
+</head>
+<body>
+  <h2>Cambiar colores de fondo y texto</h2>
+  <p>Haz clic en un botón para cambiar el color del fondo y del texto:</p>
+
+  <button onclick="cambiarColor('lightblue', 'darkblue')">Azul claro</button>
+  <button onclick="cambiarColor('lightgreen', 'darkgreen')">Verde</button>
+  <button onclick="cambiarColor('lightcoral', 'white')">Rojo</button>
+
+  <script>
+    function cambiarColor(fondo, texto) {
+      document.body.style.backgroundColor = fondo;
+      document.body.style.color = texto;
+    }
+  </script>
+</body>
+</html>

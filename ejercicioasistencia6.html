@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Adivinanza</title>
+</head>
+<body>
+  <button onclick="jugar()">Jugar</button>
+
+  <script>
+    const numeroSecreto = 7;
+    function jugar() {
+      let intento = Number(prompt("Adivina el número secreto (entre 1 y 10):"));
+      if (intento === numeroSecreto) {
+        alert("¡Acertaste! ");
+      } else {
+        alert("Incorrecto. El número secreto era " + numeroSecreto);
+      }
+    }
+  </script>
+</body>
+</html>

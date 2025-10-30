@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Contador y Colores</title>
+</head>
+<body id="body">
+  <h2>Contador:</h2>
+  <p id="contador">10</p>
+  <button onclick="disminuir()">Disminuir</button>
+
+ 
+  <script>
+    let contador = 10;
+    function disminuir() {
+      if (contador > 0) {
+        contador--;
+        document.getElementById("contador").textContent = contador;
+      }
+    }
+   
+  </script>
+</body>
+</html>
